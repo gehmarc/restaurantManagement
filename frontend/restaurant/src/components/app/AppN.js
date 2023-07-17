@@ -1,16 +1,22 @@
 import React from 'react'
-import { Route, Router } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
 import HomePage from '../main/HomePage'
 import NavN from '../nav/NavN'
 import Footer from '../Footer'
+import Login from '../auth/Login'
+import Register from '../auth/Register'
 
 const AppN = () => {
   return (
     <div id="top">
         
         <NavN />
-        <HomePage />
+        <Routes>
+            <Route path='/login' element={<Login />}></Route>
+            <Route path='/register' element={<Register />}></Route>
+            <Route path='/' element={<HomePage />}></Route>
+        </Routes>
         <Footer />
     </div>
   )

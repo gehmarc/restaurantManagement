@@ -1,4 +1,6 @@
 import React from 'react'
+import FoodImageOne from '../../../staticImage/images/hero-banner-bg.png'
+import FoodImageTwo from '../../../staticImage/images/background4.png'
 
 const HeroSection = () => {
   return (
@@ -20,10 +22,10 @@ const HeroSection = () => {
                     </div>
 
                     <figure className="hero-banner">
-                        <img src="../../staticImage/images/hero-banner-bg.png" width="820" height="716" alt="" aria-hidden="true"
+                        <img src={FoodImageOne} width="820" height="716" alt="" aria-hidden="true"
                         className="w-100 hero-img-bg" />
 
-                        <img src="../../staticImage//images/background4.png" width="700" height="637" loading="lazy" alt="export"
+                        <img src={ FoodImageTwo } width="700" height="637" loading="lazy" alt="export"
                         className="w-100 hero-img" />
                     </figure>
 

@@ -39,33 +39,13 @@ const config = {
 //     }
 // }
 
-export const uploadCertificate = async( data ) => {
-    try{
-        const response = await axios.post('http://localhost:8000/api/v1/gce/certificate/', data, configToken);
-        return response
-    }catch(err) {
-        console.warn(err);
-        return err
-    }
-}
 
-export const  auth = async (data, path) => {
+export const  auth = async (path, data) => {
     try {
         const response = await axios.post(`http://localhost:8000/api/v1/auth/${path}/`, data, config);
         return response
     } catch (err) {
         console.warn(err);
         return(err)
-    }
-}
-
-export const validateData = async(data, path) => {
-    try {
-        const response = await axios.post(`http://localhost:8000/api/v1/gce/${path}/`, data, config);
-        return response
-
-    } catch(err) {
-        console.warn(err)
-        return err
     }
 }

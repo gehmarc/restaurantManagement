@@ -1,9 +1,10 @@
 import React from 'react'
+import Main from '../admin/Main'
 
 const AppUser = () => {
   return (
     <div>
-      welcome
+      <Main />
     </div>
   )
 }

@@ -15,22 +15,21 @@ const NavN = () => {
           <nav className="navbar" data-navbar>
             <ul className="navbar-list">
 
-              <li className="nav-item">
-                <Link to="/order" className="navbar-link" data-nav-link>Order Now</Link>
-              </li>
 
               <li className="nav-item">
                 <Link to="/menu" className="navbar-link" data-nav-link>Main Menu</Link>
               </li>
-
               <li className="nav-item">
-                <Link to="/register" className="navbar-link" data-nav-link>Signup / Login</Link>
+                <Link to="/order" className="navbar-link" data-nav-link>Order Now</Link>
               </li>
 
               <li className="nav-item">
                 <Link to="#" className="navbar-link" data-nav-link>Contact Us</Link>
               </li>
 
+              <li className="nav-item">
+                <Link to="/register" className="navbar-link" data-nav-link>Signup / Login</Link>
+              </li>
             </ul>
           </nav>
 

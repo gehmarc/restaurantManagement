@@ -1,0 +1,85 @@
+
+.auth {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../staticImage/images/hero-bg.jpg')
+}
+.auth input {
+    outline: none;
+}
+.auth_form {
+    width: 96%;
+    height: auto;
+    max-width: 50rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0px 0px 6px 3px rgba(50, 55, 58, 0.322);
+    z-index: 3;
+}
+.auth_form .title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: var(--ff-rubik);
+    font-size: 2.8rem;
+    font-weight: var(--fw-700);
+    letter-spacing: -1px;
+}
+.passwordInputWrapper {
+    position: relative;
+}
+.passwordInputWrapper .eye_view {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-150%, -50%);
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+.auth_form_input {
+    border: 1px solid rgba(0, 0, 255, 0.137);
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    padding: 1rem;
+}
+.auth_form_submit {
+    color: #F58C2D;
+    margin-top: 2rem;
+    background-color: #f58a2d23;
+}
+.auth_or {
+    text-align: center;
+    margin-block: 1rem;
+}
+.auth_method_link {
+    display: inline;
+}
+.blue_link {
+    color: rgb(110, 149, 255);
+    margin-inline: 3px;
+}
+.google_login_button {
+    width: 100%;
+    border: 1px solid rgb(110, 149, 255);
+    padding: .7rem;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.auth_button_image {
+    width: 3rem;
+    height: 100%;
+    display: inline;
+    margin-right: 1rem;
+}
+.auth_svg_fb {
+    width: 5rem;
+}

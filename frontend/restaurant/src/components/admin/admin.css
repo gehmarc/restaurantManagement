@@ -1,0 +1,333 @@
+:root{
+    --primaryColor: #0A0721;
+    --textColor: #707070;
+}
+.navBar{
+    /* height: 50px; */
+    padding: 1rem;
+    box-shadow: 0px 1px 6px #3131552a;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1000;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 3fr 4fr 1fr;
+    width: 100%;
+    max-width: 150rem;
+    margin: auto;
+}
+
+
+.navBar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 130%;
+    display: flex;
+}
+.navBar ul li{
+    display: inline;
+    padding: 0px 0px;
+    margin: 0px 10px;
+}
+.active{
+    /* border-bottom: 2px solid var(--textColor); */
+    background: #ececec;
+}
+
+.navBar a{
+    text-decoration: none;
+    color: var(--textColor);
+    text-transform: capitalize;
+    outline: none;
+    font-size: .9rem;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 8px 20px 2px;
+}
+.navBar .logo {
+    color: var(--color);
+    font-family: var(--ff-rubik);
+    font-size: 2.8rem;
+    font-weight: var(--fw-700);
+    letter-spacing: -1px;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+}
+
+
+.searchdiv{
+    height: 3rem;
+    position: relative;
+    display: flex;
+}
+.searchdiv div{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgb(245, 140, 45);
+    width: 34px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-style: 33px;
+    transition: all .2s ease;
+}
+.navBar .searchBox{
+    outline: none;
+    border: none;
+    background: #e4e4e4a9;
+    border-radius: 4px;
+    width: 25rem;
+    color: var(--textColor);
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/*  main section start here=========================== */
+#main{
+    display: grid;
+    grid-template-columns: 220px auto;
+    grid-gap: 10px;
+}
+
+
+
+/*  Main panel for the app starts here... */
+#mainPanel{
+    background: #222D32;
+    width: 220px;
+    height: calc(100vh - 50px);
+    border-right: 2px solid var(--textColor);
+    font-family: 'montserrat light';
+    color: #fff;
+    font-size: .75em;
+    position: relative;
+}
+
+#resize{
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 17, 17, 0);
+    position: absolute;
+    top: 0;
+    right: -2px;
+    z-index: 1000;
+    cursor: col-resize;
+}
+#upper{
+    height: 50%;
+    border-bottom: 2px solid var(--textColor);
+    padding-top: 20px;
+    overflow-y: hidden;
+}
+.title{
+    padding: 8px 20px;
+    margin-right: 0px;
+    opacity: .7;
+    cursor:default;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+h4{
+    margin: 0;
+    font-weight: 100;
+}
+.class, .lowerWrapper{
+    padding-left: 30px;
+}
+.class .cat{
+    display: block;
+    padding: 4px;
+    /* opacity: .3; */
+    width: 90%;
+    margin: 4px auto;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.class .cat:hover{
+    opacity: .5;
+}
+.lowerWrapper{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 20px;
+}
+.fxn{
+    display: block;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'jura';
+    cursor: pointer;
+}
+.me-icon{
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.me-icon img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+.user{
+    display: flex;
+    align-items: center;    
+}
+.name-pseudo p{
+    margin: 0px 0px 0px 8px;
+    padding: 0;
+    font-size: .7rem;
+    font-family: 'montserrat light';
+    opacity: .5;
+}
+.name-pseudo .name{
+    font-size: .85rem;
+    opacity: 1;
+}
+/* lettering component for Sorting */
+#letter{
+    position: fixed;
+    top: 50px;
+    right: 0;
+    color: #9E9E9E;
+    font-family: 'Segoe UI';
+    font-size: .72em;
+}
+.sorter{
+    display: block;
+    background: #dfdfdf;
+    padding: 3px 7px;
+    border-radius: 2px;
+    margin: 2.2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.sorter:hover{
+    color: #dfdfdf;
+    background: #999;
+}
+
+
+
+
+/* Book component of the main class===================== */
+#book{
+    margin-right: 35px;
+}
+#loan{
+    margin-right: 35px;
+}
+.admin_container{
+    margin: clamp(0rem, 3vw, 3rem);
+}
+table{
+    width: 100%;
+}
+.bookItem{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+tr{
+    display: block;
+    padding: 6px 0px 8px;
+    cursor: default;
+    text-transform: capitalize;
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr 1fr 1fr;
+    text-align: left;
+}
+tr td:nth-child(5){
+    color: #ffffff;
+    background: rgb(255, 69, 69);
+    text-align: center;
+}
+.bookItem tr{
+    font-size: .86em;
+    border-bottom: 1px solid var(--textColor);
+}
+.control{
+    height: 40px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+@media(min-width: 1200px){
+    .control{
+        width: 70%;
+        margin: 10px auto;
+    }
+}
+
+.admin-btn{
+    font-size: 1.2em;
+    border-radius: 25px;
+    padding: 10px 15px;
+    margin: 10px 0px;
+    font-family: 'montserrat light';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.border{
+    border: 1px solid #333;
+}
+
+
+
+.div{
+    width: 100px;
+    height: 100px;
+    background: #0A0721;
+    margin: 10px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.border-right{
+    width: 2px;
+    height: 100%;
+    background: red;
+    position: absolute;
+    top: 0;
+    right: -3px;
+    cursor: col-resize;
+}
+
+
+
+
+
+
+
+.fb-btn{
+    background: white;
+    border: none;
+}
