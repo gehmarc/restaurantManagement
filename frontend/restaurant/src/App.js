@@ -12,7 +12,6 @@ function App() {
 
   return (
     <div className="App">
-      <div className='container'>
       {
         user?.user 
         ? (
@@ -23,7 +22,6 @@ function App() {
         )
       }
         
-      </div>
     </div>
   );
 }
