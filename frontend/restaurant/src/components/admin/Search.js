@@ -1,21 +1,17 @@
-import {useState, useContext} from 'react';
-import { BookContext } from './Main/BookContext'; 
+import {useState} from 'react';
 import { IoSearchOutline } from 'react-icons/io5'
-// import {LoanBookContext} from './Main/LoanBookContext'
 
 
 
 function Search(){
 
-    const [allBooks, setBook] = useState(BookContext);
+    const [foods, setFoods] = useState('');
     const [search, setSearch] = useState('');
 
-    // ---------------------clear content in search input field
     const clear = ()=>{
         setSearch('');
     }
 
-    // ---------------------loop through the array of books and return searched books
     
     const searchBook = e=>{
         let value = e.target.value;
@@ -23,14 +19,14 @@ function Search(){
         
         let filteredBooks = [];
 
-        for(let i = 0; i<allBooks.length;i++){
+        for(let i = 0; i<foods.length;i++){
             value = value.toLowerCase();
-            const titleSearch = allBooks[i].title.toLowerCase();
+            const titleSearch = foods[i].title.toLowerCase();
 
             if(titleSearch.includes(value)){
-                filteredBooks.push(allBooks[i])
+                filteredBooks.push(foods[i])
             }
-            setBook(filteredBooks)
+            setFoods(filteredBooks)
         }
         
 

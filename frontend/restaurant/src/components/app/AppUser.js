@@ -3,9 +3,9 @@ import Main from '../admin/Main'
 
 const AppUser = () => {
   return (
-    <div>
+    <>
       <Main />
-    </div>
+    </>
   )
 }
 

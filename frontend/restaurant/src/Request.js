@@ -16,7 +16,7 @@ const config = {
     }
 }
 
-// const BASEURL = 'http://localhost:8000/api/v1'
+const BASEURL = 'http://localhost:8000/api/v1'
 
 
 // export const patchRequest = async(endpoint, data) => {
@@ -28,6 +28,25 @@ const config = {
 //         return error
 //     }
 // }
+export const postRequest = async(endpoint, data) => {
+    try {
+        const response = await axios.post(`${BASEURL}${endpoint}`, data, config);
+        return response
+    } catch (error) {
+        console.error(error);
+        return error
+    }
+}
+
+export const getRequest = async(endpoint) => {
+    try {
+        const response = await axios.get(`${BASEURL}${endpoint}`, config);
+        return response
+    } catch (error) {
+        console.error(error);
+        return error
+    }
+}
 
 // export const deleteRequest = async(endpoint) => {
 //     try {

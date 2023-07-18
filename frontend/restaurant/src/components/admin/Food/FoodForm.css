@@ -1,0 +1,284 @@
+@import url('https://cdn.syncfusion.com/ej2/material.css');
+.food_form_wrapper {
+        padding: 1rem;
+}
+.restaurant_create_food {
+        padding-block: 2rem;
+}
+.flex_create_food {
+        display: flex;
+        padding-inline: 1rem 0.3rem;
+}
+
+.create_food_tooltip {
+        display: none;
+}
+.food_create_input_wrapper {
+        display: grid;
+        margin-bottom: 1rem;
+        grid-gap: 1rem;
+}
+.food_create_input_wrapper .profile {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        flex-wrap: nowrap;
+}
+
+.input_restaurant_text {
+        width: 100%;
+        padding: .3rem .9rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        outline: none;
+}
+.food_create_status {
+        background-color: #43810B;
+        width: 100%;
+        font-size: var(--fs-lg);
+        text-align: center;
+        padding: .4rem;
+        color: #fff;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+        cursor: pointer;
+}
+.publish_status_not_active {
+        background-color: #42810b4d;
+        cursor: not-allowed;
+}
+.preview_status {
+        background-color: #99999962;
+        border: 1px solid #ddd;
+}
+.food_manager_title {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+}
+.status_live {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+}
+.status_live p {
+        font-size: 1rem;
+}
+.food_title {
+        margin-bottom: 2rem;
+}
+
+.create_food_form .food_create_input_wrapper{
+        display: block;
+}
+.profile {
+        display: block !important;
+        margin-bottom: 1.5rem;
+        position: relative;
+}
+.food_create_input_wrapper .image_picker {
+        border: 1px dashed #ddd;
+        border-radius: 4px;
+        height: 9rem;
+        position: relative;
+        overflow: hidden;
+}
+.profile_picture input {
+        height: 100%;
+        border: none;
+        cursor: pointer;
+}
+
+.profile h4 {
+        margin-bottom: .5rem;
+}
+.create_food_form .input_restaurant_text {
+        padding-block: 0.7rem;
+}
+.imagePicker_decoy {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        pointer-events: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3.5rem;
+        color: rgba(107, 107, 107, 0.13);
+}
+.restaurant_title {
+        margin-right: 0;
+}
+.validateStrings {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1rem;
+}
+.validateStrings .invalid {
+        color: crimson;
+}
+.food_text_area {
+        width: 100%;
+        outline: none;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: .7rem;
+        min-height: 7rem;
+        resize: none;
+}
+.food_forminput_textarea {
+        position: relative;
+        margin-top: 3rem;
+}
+.float_input {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        font-size: var(--fs-st);
+        transform: translateY(-10%);
+        margin-right: 1rem;
+        opacity: 0.7;
+}
+.food_description_count {
+        font-size: 1rem;
+        color: var(--cinnabar);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateY(120%);
+}
+.food_text_area::-webkit-scrollbar {
+        display: none;
+}
+.restaurant_create_food .create_food_form .price_code_flex {
+        display: flex;
+}
+.promocode input {
+        text-transform: uppercase;
+}
+
+/* ===================== TAGS ============/ */
+.profile_tags {
+        display: flex;
+        flex-wrap: wrap;
+}
+.profile_tags .tag {
+        width: auto;
+        background-color: rgba(0, 140, 255, 0.151);
+        border-radius: 4px;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline-start: 1rem;
+        overflow: hidden;
+        text-transform: capitalize;
+        margin: 0.4rem;
+        font-size: calc(var(--fs-st) - 0.1rem);
+}
+.tag_remove_btn {
+        width: 2rem;
+        height: 100%;
+        background-color: rgba(0, 0, 255, 0.096);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1rem;
+}
+
+
+/* ======================= food CREATE TIP ============= */
+.input_detail_for_input {
+        width: calc(100% - 3rem);
+        max-width: 18rem;
+        /* margin-right: auto; */
+        position: relative;
+}
+.aside_tooltip_wrapper {
+        border: 1px solid var(--gray);
+        border-radius: 8px;
+        overflow: hidden;
+}
+.input_detail_for_input .detail_head {
+        width: 100%;
+        height: 2.4rem;
+        background-color: var(--main-color);
+        color: #fff;
+        text-transform: capitalize;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.tooltip_content {
+        padding: 1rem;
+        font-size: 0.85rem;
+        line-height: 2rem;
+}
+.button_payment_request {
+        padding-top: 1rem;
+}
+.create_food_form .create_food_button {
+        background-color: var(--tangerine);
+        padding: 0.5rem 2rem;
+        border-radius: 4px;
+        color: #fff;
+        margin: 2rem auto;
+}
+.tooltip_aside {
+        margin-top: 2rem;
+}
+.food_create_flex_double {
+        display: flex;
+        justify-content: space-between;
+}
+.food_create_flex_double >div {
+        width: 48%;
+}
+@media(min-width: 50rem){
+        .flex_create_food {
+                justify-content: space-between;
+        }
+        .create_food_form {
+                width: 65%;
+                margin-top: 2rem;
+        }
+        .create_food_tooltip {
+                position: relative;
+                display: block;
+                width: 28%;
+                position: sticky;
+                top: 0%;
+                background-color: #222D32;
+                padding: 1rem 2rem;
+                margin: 0px;
+        }
+        .flex_create_food .dashboard_table_wrapper {
+                padding: 0;
+        }
+        .create_food_tooltip >div {
+                position: sticky;
+                top: 15%;
+        }
+        .create_foodWrapper {
+                border: 1px solid var(--gray);
+                padding: 2rem;
+        }
+        .mobile {
+                display: none;
+        }
+        .profile_tags .tag {
+                height: 2.3rem;
+                margin: 0.6rem;
+                font-size: calc(var(--fs-st) - 0rem);
+        }
+        .imagePicker_decoy {
+                font-size: 4rem;
+                color: rgba(107, 107, 107, 0.13);
+        }
+}

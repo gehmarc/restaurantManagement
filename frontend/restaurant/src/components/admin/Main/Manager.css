@@ -1,0 +1,275 @@
+.foodManage {
+    padding-top: 2rem;
+    background-color: #ECF0F5;
+    min-height: 100vh;
+}
+.foodManage .shadow, .delete_modal .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.foodManage .dashboard_title {
+    text-align: center;
+    color: var(--tangerine);
+    font-family: var(--ff-rubik);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+.add_food_btn_wrapper {
+    display: flex;
+    border-bottom: 1px solid rgb(0, 162, 255);
+    margin-bottom: 2rem;
+    
+}
+.add_food_btn {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 162, 255);
+    margin-block: 1rem;
+    border-radius: 4px;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.dashboard_table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.dashboard_table_wrapper {
+    background-color: #fff;
+    padding: 1rem;
+}
+.dashboard_table td, .dashboard_table th {
+    border: 1px solid #f4f4f4;
+    text-align: left;
+    padding: 12px 5px;
+    font-size: 1.2rem;
+}
+  
+.dashboard_table tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+.center_tableData {
+    justify-content: center;
+}
+.table_item_available {
+    color: #fff;
+    background-color: #54A75B;
+    font-size: 1rem;
+    text-transform: lowercase;
+    padding: .3rem 0.8rem;
+    border-radius: 4px;
+    display: inline;
+}
+.table_item_unavailable {
+    background-color: var(--tangerine);
+}
+.table_item_close {
+    background-color: var(--cinnabar);
+}
+.action_btn_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.action_btn {
+    padding: .7rem .8rem;
+    border: 1px solid var(--tangerine);
+    color: var(--tangerine);
+    margin-right: 0.5rem;
+    border-radius: 4px;
+    background-color: hsla(31, 84%, 50%, 0.185);
+    transition: all .3s ease-in-out;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.delete_action_btn:hover {
+
+    border: 1px solid var(--cinnabar);
+    color: var(--cinnabar);
+    background-color: rgba(220, 20, 60, 0.185);
+}
+
+/* ======== FOOD DETAIL MODAL ============ */
+.foodModal, .delete_modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(33, 44, 58, 0.123);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalContainer, .delete_modal_content {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 80rem;
+    position: relative;
+    z-index: 3;
+}
+.imagePreview {
+    width: 100%;
+    height: 20rem;
+    background-color: #222D32;
+    border-radius: 4px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image_previewIcon {
+    font-size: 8rem;
+    color: #ffffff36;
+}
+
+.foodmodal_content {
+    margin-block: 2rem;
+}
+/* ========== DELETE MODAL ============= */
+.delete_modal_content {
+  max-width: 40rem;
+}
+.delete_modal_content .btn {
+  width: 10rem;
+  margin: auto;
+  height: auto;
+  padding-block: .5rem;
+  border-radius: 4px;
+  background-color: var(--cinnabar);
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  border: 1px solid var(--cinnabar);
+}
+.delete_modal_content .btn:hover {
+  background-color: rgba(220, 20, 60, 0.192);
+  color: var(--cinnabar);
+}
+.modal_center_text {
+  text-align: center;
+  margin-block-end: 1rem;
+}
+
+@media(min-width: 50rem){
+    .modalContainer {
+        padding: 2rem;
+    }
+    .imagePreview {
+        height: 35rem;
+    }
+}
+
+
+/* [data-tooltip] {
+  position: relative;
+  cursor: pointer;
+}
+[data-tooltip]:before,
+[data-tooltip]:after {
+  line-height: 1;
+  font-size: .9em;
+  pointer-events: none;
+  position: absolute;
+  box-sizing: border-box;
+  display: none;
+  opacity: 0;
+}
+[data-tooltip]:before {
+  content: "";
+  border: 5px solid transparent;
+  z-index: 100;
+}
+[data-tooltip]:after {
+  content: attr(data-tooltip);
+  text-align: center;
+  min-width: 3em;
+  max-width: 21em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 4px 12px;
+  border-radius: 9px;
+  background: #4621FF;
+  color: #FFFFFF;
+  z-index: 99;
+}
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  display: block;
+  position: fixed;
+  opacity: 1;
+} */
+/* [data-tooltip]:not([data-flow])::before,
+[data-tooltip][data-flow="top"]::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: #4621FF;
+} */
+/* [data-tooltip]:not([data-flow])::after,
+[data-tooltip][data-flow="top"]::after {
+  bottom: calc(100% + 5px);
+}
+[data-tooltip]:not([data-flow])::before, [tooltip]:not([data-flow])::after,
+[data-tooltip][data-flow="top"]::before,
+[data-tooltip][data-flow="top"]::after {
+  left: 50%;
+  -webkit-transform: translate(-50%, -4px);
+          transform: translate(-50%, -4px);
+}
+[data-tooltip][data-flow="bottom"]::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: #4621FF;
+}
+[data-tooltip][data-flow="bottom"]::after {
+  top: calc(100% + 5px);
+} */
+/* [data-tooltip][data-flow="bottom"]::before, [data-tooltip][data-flow="bottom"]::after {
+  left: 50%;
+  -webkit-transform: translate(-50%, 8px);
+          transform: translate(-50%, 8px);
+}
+[data-tooltip][data-flow="left"]::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: #4621FF;
+  left: calc(0em - 5px);
+  -webkit-transform: translate(-8px, -50%);
+          transform: translate(-8px, -50%);
+}
+[data-tooltip][data-flow="left"]::after {
+  top: 50%;
+  right: calc(100% + 5px);
+  -webkit-transform: translate(-8px, -50%);
+          transform: translate(-8px, -50%);
+} */
+/* [data-tooltip][data-flow="right"]::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: #4621FF;
+  right: calc(0em - 5px);
+  -webkit-transform: translate(8px, -50%);
+          transform: translate(8px, -50%);
+}
+[data-tooltip][data-flow="right"]::after {
+  top: 50%;
+  left: calc(100% + 5px);
+  -webkit-transform: translate(8px, -50%);
+          transform: translate(8px, -50%);
+}
+[data-tooltip=""]::after, [data-tooltip=""]::before {
+  display: none !important;
+} */

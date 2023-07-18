@@ -1,65 +1,72 @@
-import {useEffect} from 'react';
-import {Link} from 'react-router-dom';
-import e from './img/3.jpeg'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import './MainPanel.css'
+import { IoIosLogOut } from 'react-icons/io'
+import { IoNotificationsOutline } from 'react-icons/io5'
+import { TbHexagonLetterH } from 'react-icons/tb'
+import { ImSpoonKnife } from 'react-icons/im'
+import { BsCashStack, BsChatSquareDots, BsPlusCircle } from 'react-icons/bs'
 
-function MainPanel(){
-
-    useEffect(() => {
-        const doc = document.querySelector('#mainPanel');
-        const resize = document.querySelector('#resize');
-
-        resize.addEventListener('mousedown', resizer);
-
-        function resizer(e){
-            let prevX = e.clientX
-            
-            window.addEventListener('mousemove', mousemove);
-            window.addEventListener('mouseup', mouseup);
-
-            function mousemove(e){
-                const rec = doc.getBoundingClientRect();
-                doc.style.width = rec.width -(prevX - e.clientX) + 'px';
-
-            }
-            prevX = e.clientX;
-
-            function mouseup(){
-                window.removeEventListener('mousedown', resizer);
-                window.removeEventListener('mousemove', mousemove);
-            }
-
-        }
+const MainPanel = ({user, handleRemoveAuthModal}) => {
+        const [sideNav, setSideNav] = useState(false);
         
-    })
+        const navigate = useNavigate()
 
-    return(
-        <div id="mainPanel">
-            <div id = 'resize'></div>
-            <div id="upper">
-                <div className="title">
-                    <h4>Search Platform by Category</h4>
+  return (
+        <div id='mainPanel'>
+        <aside className={`seller_nav_aside ${sideNav ? 'scale_side_nav': ''}`}>
+                <div onClick={() => {setSideNav(!sideNav)}} className='burger nav_aside_link'>
+                        <span className='nav_aside_icon'>
+                                <TbHexagonLetterH />
+                        </span>
+                        <span className='nav_aside_text'>
+                                Open
+                        </span>
                 </div>
-                <div className = "class">
-                    <span className="cat">Foods</span>
+                <div onClick={() => {navigate(`/blackrose/earnings`)}} className='burger nav_aside_link'>
+                        <span className='nav_aside_icon'>
+                                <BsCashStack />
+                        </span>
+                        <span className='nav_aside_text'>
+                                Earnings
+                        </span>
                 </div>
-            </div>
-            <div id="lower">
-                <div className="lowerWrapper">
-                    <span className ="fxn"><Link to="chat-with-admin">Contact Admin</Link></span>
-                    <span className ="fxn">Switch User</span>
-                    <span className ="fxn">Settings</span>
-                    <span className ="fxn"><Link to = '/create-account'>Create account</Link></span>
-                    <span className ="fxn"><Link to = '/login'>Log In</Link></span>
-                    <div className ="fxn user">
-                        <div className="me-icon"><img src={e} alt="user"></img></div>
-                        <div className="name-pseudo">
-                            <p className="name">Asgaurd Man</p>
-                            <p className="pseudo"><i>@risenagain</i></p>
-                        </div>
-                    </div>
+                <div onClick={() => {navigate(`/foods/reservations`)}} className='burger nav_aside_link'>
+                        <span className='nav_aside_icon'>
+                                <BsChatSquareDots />
+                        </span>
+                        <span className='nav_aside_text'>
+                                Reservations
+                        </span>
                 </div>
-            </div>
+                <div onClick={() => {navigate('/foods/manage-orders')}} className='burger nav_aside_link'>
+                        <span className='nav_aside_icon'>
+                                <IoNotificationsOutline />
+                        </span>
+                        <span className='nav_aside_text'>
+                                Orders
+                        </span>
+                </div>
+                <div onClick={() => {navigate('/foods/manage-food')}} className='burger nav_aside_link'>
+                        <span className='nav_aside_icon'>
+                                <ImSpoonKnife />
+                        </span>
+                        <span className='nav_aside_text'>
+                                Manage Food
+                        </span>
+                </div>
+                <div onClick={ handleRemoveAuthModal } className='dropdownNav-item nav_aside_link logoutNavLink'>
+                        <span className='nav_aside_icon'>
+                                <IoIosLogOut />
+                        </span>
+                        <span className='nav_aside_text'>
+                                logout
+                        </span>
+                </div>
+        </aside>
+
         </div>
-    )
+  )
 }
-export default MainPanel;
+
+export default MainPanel

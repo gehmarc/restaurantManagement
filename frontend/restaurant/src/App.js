@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       {
-        user?.user 
+        !user?.user 
         ? (
           <AppUser user={user} />
         ) : (

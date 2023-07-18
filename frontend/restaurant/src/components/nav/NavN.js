@@ -14,11 +14,10 @@ const NavN = () => {
 
           <nav className="navbar" data-navbar>
             <ul className="navbar-list">
-
-
               <li className="nav-item">
                 <Link to="/menu" className="navbar-link" data-nav-link>Main Menu</Link>
               </li>
+
               <li className="nav-item">
                 <Link to="/order" className="navbar-link" data-nav-link>Order Now</Link>
               </li>

@@ -1,0 +1,160 @@
+.admin_pages {
+        padding-left: 5rem;
+}
+.seller_nav_aside {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 3rem;
+        box-shadow: 2px 0px 2px rgba(216, 216, 216, 0.445);
+        height: calc( 100vh - 6rem);
+        padding-block: 2rem;
+        transition: all .3s ease-in-out;
+        z-index: 25;
+        background: #222D32;
+}
+.scale_side_nav {
+        width: 45%;
+        max-width: 300px;
+}
+
+.nav_aside_link {
+        display: flex;
+        align-items: center;
+        padding-block: .4rem;
+        color: #fff;
+        overflow: hidden;
+}
+.nav_aside_icon {
+        padding-inline: .7rem;
+        font-size: 1.2rem;
+        padding-top: .3rem;
+}
+.nav_aside_text {
+        font-size: 1.2rem;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .4s ease-in-out;
+        margin-left: 2rem;
+        cursor: pointer;
+}
+.scale_side_nav .nav_aside_text {
+        visibility: visible;
+        opacity: 1;
+}
+
+
+@media(min-width: 50rem){
+        .seller_nav_aside {
+                width: 5rem;
+        }
+        .scale_side_nav {
+                width: 25%;
+        }
+        .nav_aside_link {
+                padding-block: .8rem;
+                padding-left: .2rem;
+        }
+        .nav_aside_icon {
+                padding-inline: .7rem;
+                font-size: 2rem;
+                padding-top: .3rem;
+        }
+}
+
+
+
+
+
+/*  Main panel for the app starts here... */
+
+
+    #resize{
+        width: 2px;
+        height: 100%;
+        background: rgba(255, 17, 17, 0);
+        position: absolute;
+        top: 0;
+        right: -2px;
+        z-index: 1000;
+        cursor: col-resize;
+    }
+    #upper{
+        height: 50%;
+        border-bottom: 2px solid var(--textColor);
+        padding-top: 20px;
+        overflow-y: hidden;
+    }
+    .title{
+        padding: 8px 20px;
+        margin-right: 0px;
+        opacity: .7;
+        cursor:default;
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+    h4{
+        margin: 0;
+        font-weight: 100;
+    }
+    .class, .lowerWrapper{
+        padding-left: 30px;
+    }
+    .class .cat{
+        display: block;
+        padding: 4px;
+        /* opacity: .3; */
+        width: 90%;
+        margin: 4px auto;
+        cursor: pointer;
+        transition: all .2s linear;
+    }
+    
+    .class .cat:hover{
+        opacity: .5;
+    }
+    .lowerWrapper{
+        position: fixed;
+        bottom: 0;
+        margin-bottom: 20px;
+    }
+    .fxn{
+        display: block;
+        padding: 5px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .me-icon{
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+    }
+    .me-icon img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+    }
+    .user{
+        display: flex;
+        align-items: center;    
+    }
+    .name-pseudo p{
+        margin: 0px 0px 0px 8px;
+        padding: 0;
+        font-size: .7rem;
+        opacity: .5;
+    }
+    .name-pseudo .name{
+        font-size: .85rem;
+        opacity: 1;
+    }
+
