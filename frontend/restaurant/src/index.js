@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { UserContextProvider } from './components/context/UserContext';
+import './static/FontsFree-Net-August-Stories-Serif-1.ttf'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

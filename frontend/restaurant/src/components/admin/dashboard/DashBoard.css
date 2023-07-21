@@ -21,9 +21,21 @@
     background-color: #54A75B;
     overflow: hidden;
 }
+.card_orders {
+    background-color: #F29C2D;
+}
+.card_users {
+    background-color: #DD4B39;
+}
+.dashboard_card:nth-child(4){
+    background-color: #3EC1EF;
+}
 .dashboard_card .card_main {
     padding: .8rem;
     color: #fff;
+}
+.card_stat_text {
+    font-size: 0.85em;
 }
 .card_link {
     width: 100%;
@@ -34,6 +46,7 @@
     background-color: rgba(0, 0, 0, 0.199);
     font-size: 1.2rem;
     padding-block: .5rem;
+    cursor: pointer;
 }
 .card_link_text {
     margin-right: 5px;

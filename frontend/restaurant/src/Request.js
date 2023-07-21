@@ -59,9 +59,9 @@ export const getRequest = async(endpoint) => {
 // }
 
 
-export const  auth = async (path, data) => {
+export const  auth = async (endpoint, data) => {
     try {
-        const response = await axios.post(`http://localhost:8000/api/v1/auth/${path}/`, data, config);
+        const response = await axios.post(`${BASEURL}${endpoint}/`, data, config);
         return response
     } catch (err) {
         console.warn(err);

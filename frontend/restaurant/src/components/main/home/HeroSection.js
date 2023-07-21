@@ -1,8 +1,10 @@
 import React from 'react'
 import FoodImageOne from '../../../staticImage/images/hero-banner-bg.png'
 import FoodImageTwo from '../../../staticImage/images/background4.png'
+import { useNavigate } from 'react-router-dom'
 
 const HeroSection = () => {
+  const navigate = useNavigate()
   return (
     <>
       <article>
@@ -17,7 +19,7 @@ const HeroSection = () => {
 
                         <p className="hero-text">Food is any substance consumed to provide nutritional support for an organism.</p>
 
-                        <button className="btn">Book A Table</button>
+                        <button className="btn" onClick={() => navigate('/book-reservation')}>Book A Table</button>
 
                     </div>
 

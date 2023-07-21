@@ -9,10 +9,10 @@ const Footer = () => {
 
         <div className="footer-brand">
 
-          <a href="" className="logo">Foodie<span className="span">.</span></a>
+          <a href="" className="logo">Black Rose Luxe<span className="span">.</span></a>
 
           <p className="footer-text">
-            Financial experts support or help you to to find out which way you can raise your funds more.
+            Financial experts support or help you to find out which way you can raise your funds more.
           </p>
 
           <ul className="social-list">
@@ -52,15 +52,15 @@ const Footer = () => {
           </li>
 
           <li>
-            <p className="footer-list-item">+1 (062) 109-9222</p>
+            <p className="footer-list-item">+237 658-424-186</p>
           </li>
 
           <li>
-            <p className="footer-list-item">Info@YourGmail24.com</p>
+            <p className="footer-list-item">blackroseluxe3@gmail.com</p>
           </li>
 
           <li>
-            <address className="footer-list-item">153 Williamson Plaza, Maggieberg, MT 09514</address>
+            <address className="footer-list-item">Comercial Avenue - Bamenda</address>
           </li>
 
         </ul>
@@ -72,7 +72,7 @@ const Footer = () => {
           </li>
 
           <li>
-            <p className="footer-list-item">Monday-Friday: 08:00-22:00</p>
+            <p className="footer-list-item">Tuesdays-Sundays: 08:00AM-8:30PM</p>
           </li>
 
           <li>
@@ -125,7 +125,7 @@ const Footer = () => {
     <div className="footer-bottom">
       <div className="container">
         <p className="copyright-text">
-          &copy; 2022 <a href="#" className="copyright-link">codewithsadee</a> All Rights Reserved.
+          &copy; 2023 <a href="#" className="copyright-link">Black Rose Luxe</a> All Rights Reserved.
         </p>
       </div>
     </div>

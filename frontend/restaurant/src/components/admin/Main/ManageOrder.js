@@ -36,7 +36,7 @@ const ManageOrder = () => {
                         </tr>
                         <tr data-tooltip="Tooltip help here!" data-flow="right" draggable onDoubleClick={()=> setFoodModal(true)}>
                             <td >34</td>
-                            <td >Kimbi Darlington</td>
+                            <td >GEH Mark</td>
                             <td >23-04-2023:04:30PM</td>
                             <td >XAF 1200</td>
                             {/* <td >5</td> */}

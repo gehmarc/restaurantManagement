@@ -1,8 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './Nav.css'
 
 const NavN = () => {
+  const navigate = useNavigate()
+  
   return (
     <div>
         <header className="header" data-header>
@@ -15,7 +17,7 @@ const NavN = () => {
           <nav className="navbar" data-navbar>
             <ul className="navbar-list">
               <li className="nav-item">
-                <Link to="/menu" className="navbar-link" data-nav-link>Main Menu</Link>
+                <Link to="/menu/main-menu" className="navbar-link" data-nav-link>Main Menu</Link>
               </li>
 
               <li className="nav-item">
@@ -37,7 +39,7 @@ const NavN = () => {
               <ion-icon name="search-outline"></ion-icon>
             </button>
 
-            <button className="btn btn-hover">Reservation</button>
+            <button onClick={() => navigate('/book-reservation')} className="btn btn-hover">Reservation</button>
 
             <button className="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
               <span className="line top"></span>

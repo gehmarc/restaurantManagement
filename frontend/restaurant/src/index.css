@@ -213,6 +213,14 @@ body.active { overflow: hidden; }
   z-index: 1;
 }
 
+@font-face {
+font-family: "August";
+src: local("August"),
+ url("./static/FontsFree-Net-August-Stories-Serif-1.ttf") format("truetype");
+font-weight: bold;
+}
+
+
 .btn-hover::after {
   content: "";
   position: absolute;

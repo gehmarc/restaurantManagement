@@ -1,0 +1,67 @@
+.book_reservation {
+    min-height: 100vh;
+    background: #b9b9c0;
+}
+.book_reservation .container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    padding: 0;
+}
+.book_reservation .section-divider .container {
+    max-width: 150rem;
+}
+.reservation_header {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.book_reservation .title_reservation {
+    font-weight: 700;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: 'August';
+    font-size: 3rem;
+}
+.reservation_form {
+    width: 80%;
+    margin: 0rem auto;
+    padding-top: 2rem;
+}
+.reservation_form_input {
+    margin-bottom: 2rem;
+    outline: none;
+}
+.reservation_form textarea {
+    resize: none;
+}
+.book_reservation_btn, .reserveBtn {
+    padding: 0.5rem;
+    margin-top: 1rem;
+    background-color: var(--tangerine);
+    border: 1px solid var(--tangerine);
+    background-color: var(--tangerine);
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    max-width: 20rem;
+    margin: auto;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.book_reservation_btn:hover, 
+.reservationModal .reserveBtn:hover {
+    color: var(--tangerine);
+    background-color: hsla(31, 84%, 50%, 0.377);
+}
+.modal_center_text {
+    padding-block: 5rem;
+}
+.reservationModal .delete_modal_content{
+    max-width: 60rem;
+}

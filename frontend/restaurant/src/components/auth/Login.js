@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
 import './Auth.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import GoogleButtonImage from './img/google-logo-9808.png'
 import FBButtonImage from './img/logo-facebookpng-32257.png'
 import FoodImageOne from '../../staticImage/images/hero-banner-bg.png'
 import FoodImageTwo from '../../staticImage/images/background4.png'
 import { auth } from '../../Request'
+import useLocalStorage from '../../UseLocalStorage'
 
 const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [user, setUser] = useLocalStorage('user')
 
     const data = {
         "email": email,
@@ -20,8 +22,13 @@ const Login = () => {
         sendData()
     }
     const sendData = async() => {
-        const res = await auth('login', data);
-        console.log(res);
+        const res = await auth('/auth/login', data);
+        (res.status === 200 && res.data?.user) && setUser(res?.data)
+        if(res.status === 200){
+            
+            window.location.pathname = ''
+            window.location.reload('')
+        }
     }
   return (
     <div className='auth'>

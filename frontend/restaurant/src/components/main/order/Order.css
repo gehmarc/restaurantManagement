@@ -1,0 +1,120 @@
+.order_page {
+    height: calc(100vh - 9rem);
+    background-color: #F8F8FF;
+    background-image: url('../../../staticImage/images/order_background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 9rem;
+}
+.order_page .center_modal {
+    height: calc(100vh - 9rem);
+    background-color: #fff;
+    width: 100%;
+    max-width: 80rem;
+    padding: 2rem;
+    margin: auto;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column;
+}
+
+.order_courses_image.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 1rem;
+    grid-gap: 1rem;
+    position: relative;
+    background-color: #222d22;
+}
+.order_courses_image.grid::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222d22a2;
+    opacity: 1;
+    transition: all .3s ease-in-out;
+}
+.order_courses_image.grid:hover::after  {
+    opacity: 0.6;
+}
+
+.order_courseImage_grid {
+    display: block;
+    grid-column: 2/3;
+    grid-row: 1/1;
+}
+.order_courseImage_grid:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.order_courseImage_grid:nth-child(3) {
+    grid-row: 2/3;
+}
+.order_page .content_grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+.order_page .food_order_item {
+    border-top: 1px solid #222d22;
+    padding: 1rem;
+    cursor: pointer;
+    position: relative;
+}
+.food_order_item_dropdown {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    transform: translateY(100%);
+    box-shadow: 2x 2px 5px 4px rgba(0, 0, 0, 0.062);
+    border-radius: 8px;
+    padding: 1rem;
+    display: none;
+    z-index: 120;
+}
+.order_page .food_order_item:hover > .food_order_item_dropdown{
+    display: block;
+}
+.food_order_item_text_input {
+    outline: none;
+    border: 1px solid #ddd;
+    resize: none;
+    border-radius: 4px;
+    padding: .5rem;
+    font-size: 0.8em;
+    margin-block: 1rem;
+    margin-bottom: 2rem;
+}
+.order_page .reserveBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 3.5rem;
+    margin: 0rem;
+
+}
+
+
+.order_head {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+.order_head * {
+    font-family: var(--ff-rubik);   
+}
+.food_order_item p {
+    font-family: var(--ff-rubik);   
+    font-size: 0.9em;
+}

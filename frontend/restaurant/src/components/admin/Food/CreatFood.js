@@ -19,6 +19,8 @@ const CreatFood = () => {
 	const [price, setPrice] = useState(0);
 	const [description, setDescription] = useState('');
 	const [foodImage, setFoodImage] = useState();
+	const [isAvailable, setIsAvailable] = useState(false)
+	const [time, setTime] = useState('')
 	
 	const [serverCategories, setServerCategories] = useState([]);
 	const [tags, setTags] = useState([]);
@@ -36,10 +38,10 @@ const CreatFood = () => {
 		try{
 			const formData = new FormData()
 			formData.append("name", title)
-			formData.append("price", price)
+			formData.append("price", parseInt(price))
 			formData.append("description", description)
-			formData.append("category", tags[0])
-			formData.append("available", true)
+			formData.append("category", category)
+			formData.append("available", isAvailable)
 			formData.append("image", img)
 			
 			console.log(img);
@@ -48,6 +50,7 @@ const CreatFood = () => {
                 'Content-Type': 'multipart/form-data'
               }
             })
+			console.log(res);
 			if (res.status === 201) {
 				window.location.reload()
 			}
@@ -64,7 +67,8 @@ const CreatFood = () => {
     const validateTitle = (e) => {
 		// title.length > 5
 	}
-	const controlTagList = () => {
+	const controlTagList = (e) => {
+		e.preventDefault()
 		setTags(tags => [...tags, tagString])
 		setTagString('')
 	}
@@ -113,6 +117,7 @@ const CreatFood = () => {
 								</div>
 							</div>
 						</div>
+
 						<div className='food_create_input_wrapper'>
 							<div className='profile'>
 								<h4 className='restaurant_title'>Price</h4>
@@ -120,18 +125,12 @@ const CreatFood = () => {
 								<span className='float_input'>XAF</span>
 								<div className='validate_input'>
 									<div className='validateStrings'>
-										{/* <span className={`invalid`}>Minimun 500</span> */}
 										<span className=''>Maximum 1,000,000</span>
 									</div>
 								</div>
 							</div>
 						</div>
-						{/* <div className='food_create_input_wrapper'>
-							<div className='profile'>
-								<h4 className='restaurant_title'>Category</h4>
-								{ serverCategories.length> 1 && <CategorySelect handleCategorySelect={selectCategory} categoryList={serverCategories} /> }
-							</div>
-						</div> */}
+
 						<div className='food_create_input_wrapper profile_picture'>
 							<div className='profile'>
 								<h4 className='restaurant_title'>Food Cover</h4>
@@ -153,11 +152,12 @@ const CreatFood = () => {
 								</div>
 							</div>
 						</div>
+
 						<div className='food_create_flex_double'>
 							<div className='food_create_input_wrapper'>
 								<div className='profile'>
 									<h4 className='restaurant_title'>Available</h4>
-									<input type='select' className='input_restaurant_text' value={price} onChange={e => setPrice(e.target.value)} />
+									<input type='select' className='input_restaurant_text' value={isAvailable} onChange={e => setIsAvailable(e.target.value)} />
 									<div className='validate_input'>
 										<div className='validateStrings'>
 											{/* <span className={`invalid`}>Minimun 500</span> */}
@@ -166,10 +166,11 @@ const CreatFood = () => {
 									</div>
 								</div>
 							</div>
+
 							<div className='food_create_input_wrapper'>
 								<div className='profile'>
 									<h4 className='restaurant_title'>Close</h4>
-										<input type='time' className='input_restaurant_text' value={price} onChange={e => setPrice(e.target.value)} />
+										<input type='time' className='input_restaurant_text' value={time} onChange={e => setTime(e.target.value)} />
 									<div className='validate_input'>
 										<div className='validateStrings'>
 											<span className=''>Above now</span>
@@ -178,6 +179,20 @@ const CreatFood = () => {
 								</div>
 							</div>
 						</div>
+						
+
+						<div className='food_create_input_wrapper'>
+							<div className='profile'>
+								<h4 className='restaurant_title'>Category</h4>
+								<input className='input_restaurant_text' value={category} onChange={e => setCategory(e.target.value)} />
+								<div className='validate_input'>
+									<div className='validateStrings'>
+										<span className=''>Maximum 1,000,000</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
 						<div className='food_create_input_wrapper'>
 							<div className='profile'>
 								<h4 className='restaurant_title'>Tags</h4>
@@ -189,6 +204,7 @@ const CreatFood = () => {
 									</div>
 								</div>
 							</div>
+
 							<div className='profile_tags'>
 								{
 									tags.map( tag => (

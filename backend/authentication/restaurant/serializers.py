@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Food, UserOrder
+from .models import Food, UserOrder, Reservation
 
 class FoodSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField( required=False )
@@ -23,3 +23,9 @@ class UserOrdererializer(serializers.ModelSerializer):
         depth=1
 
     
+
+class ReservationSerializer(serializers.ModelSerializer):
+    # status = serializers.CharField( required=False )
+    class Meta:
+        model = Reservation
+        fields = '__all__'

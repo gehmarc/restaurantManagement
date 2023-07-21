@@ -3,7 +3,6 @@ from django.utils.translation import gettext_lazy as _
 # Create your models here.
 
 class Food(models.Model):
-    # id = models.IntegerField(_("id of the food"), unique=True, primary_key=True, blank=False, null=False)
     name = models.CharField(_("the name of the food"), max_length=256, blank=False, null=False)
     price = models.IntegerField(_("price of the food"), null=False, blank=False)
     available = models.BooleanField(_("determines if the food is available or not"), default=False)
@@ -19,11 +18,30 @@ class UserOrder(models.Model):
     user = models.ForeignKey('core.user',on_delete=models.CASCADE)
     total_price = models.IntegerField(_("total price of the food"), null=False, blank=True)
     quantity = models.PositiveIntegerField(default=1)
+    status = models.CharField(_("if the bill has been paid or not"), null=False, blank=False, default=False, max_length=30)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.quantity
+        return self.user
+    
+    class Meta:
+        ordering = ['-updated_at']
 
+class Reservation(models.Model):
+    name = models.CharField(_('name of the person requesting reservation'), max_length=256, null=False, blank=False)
+    count = models.IntegerField(_("number of persons you're setting reservation for"), null=False, blank=False)
+    date = models.DateField(_("date in which the reservation is to be set"), null=True, blank=True)
+    time = models.TimeField(_("time client will like to eat"), blank=False, null=False)
+    status = models.CharField(_("status of the field"), blank=False, null=False)
+    desc = models.CharField(_("anything else user will like to request"), blank=True, null=True)
 
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        ordering = ['-created_at']

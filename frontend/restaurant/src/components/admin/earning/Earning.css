@@ -1,0 +1,68 @@
+.earning_sale {
+    position: relative;
+}
+.earning_timeline {
+    padding: 1rem;
+    border: 1.5px solid #bbb;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 3rem;
+    background-color: #fff;
+    margin-bottom: 1.5rem;
+}
+.earning_stats {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0;
+    height: 0rem;
+    transform: translateY(6rem);
+    visibility: hidden;
+    height: 0rem;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+}
+.display_earning_DropDown {
+    transition: all .4s ease-in-out;
+    position: relative;
+    transform: translateY(0rem);
+    height: auto;
+    visibility: visible;
+    margin-bottom: 3rem;
+}
+.earning_stat_content {
+    display: flex;
+    align-items: center;
+    max-height: 30rem;
+}
+.figures {
+    margin-inline: 5rem;
+}
+.display_earning_DropDown .figures span {
+    display: inline;
+    margin-right: 1.5rem;
+}
+.earning_stats .chart * {
+    max-height: 20rem;
+}
+.earning_total_amount {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(38, 150, 255, 0.267);
+    color: rgb(38, 150, 255);
+    padding: 1rem 3rem;
+    font-weight: 700;
+    font-family: var(--ff-rubik);
+}
+@media(min-width: 50rem){
+    .figures {
+        margin-inline: 5rem;
+    }
+}

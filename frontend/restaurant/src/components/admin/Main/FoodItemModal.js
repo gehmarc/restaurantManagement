@@ -9,7 +9,8 @@ const FoodItemModal = ({ handleRemoveModal, food }) => {
             <div className='imagePreview'>
               {
                 food?.image ?
-                <img src={require(`./${food?.image}`).default} alt={ food?.name } />
+                // <img src={food?.image} alt={ food?.name } />
+                <span className='image_previewIcon'><AiOutlineCamera /></span>
                 :
                 <span className='image_previewIcon'><AiOutlineCamera /></span>
 

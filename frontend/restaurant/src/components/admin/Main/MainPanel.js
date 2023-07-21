@@ -7,7 +7,7 @@ import { TbHexagonLetterH } from 'react-icons/tb'
 import { ImSpoonKnife } from 'react-icons/im'
 import { BsCashStack, BsChatSquareDots, BsPlusCircle } from 'react-icons/bs'
 
-const MainPanel = ({user, handleRemoveAuthModal}) => {
+const MainPanel = ({user, handleLogoutModal}) => {
         const [sideNav, setSideNav] = useState(false);
         
         const navigate = useNavigate()
@@ -55,7 +55,7 @@ const MainPanel = ({user, handleRemoveAuthModal}) => {
                                 Manage Food
                         </span>
                 </div>
-                <div onClick={ handleRemoveAuthModal } className='dropdownNav-item nav_aside_link logoutNavLink'>
+                <div onClick={ handleLogoutModal } className='dropdownNav-item nav_aside_link logoutNavLink'>
                         <span className='nav_aside_icon'>
                                 <IoIosLogOut />
                         </span>
