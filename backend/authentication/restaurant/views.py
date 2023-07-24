@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.views import Response, status, APIView
 from .serializers import FoodSerializer, FoodItemSerializer, UserOrdererializer, ReservationSerializer
-from .models import Food
+from .models import Food, Reservation
 from core.models import User
 # Create your views here.
 
@@ -71,14 +71,29 @@ class Order(APIView):
 
 class ReservationAPIView(APIView):
     def get(self, request):
-        serializers = ReservationSerializer(many=True)
+        reservations = Reservation.objects.all()
+        serializers = ReservationSerializer(reservations, many=True)
         return Response(serializers.data, status=status.HTTP_200_OK)
     
     def post(self, request):
         serializers = ReservationSerializer(data=request.data)
-
         if serializers.is_valid():
             serializers.save()
-        #     return Response(serializers.data, status=status.HTTP_201_CREATED)
+            return Response(serializers.data, status=status.HTTP_201_CREATED)
         return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
 
+class ReservationControlAPIView(APIView):
+    def getReservation(self, id):
+        res = Reservation.objects.filter(id=id).get()
+        return res
+    def delete(self, request, id):
+        reservation = self.getReservation(id=id)
+        reservation.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+    
+    def put(self, request, id):
+        reservation = self.getReservation(id=id)
+        serializer = ReservationSerializer(reservation, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
