@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from core.models import User
 # Create your models here.
 
 class Food(models.Model):
@@ -9,6 +10,7 @@ class Food(models.Model):
     description = models.CharField(_("Say whatever you want about the food"), max_length=500, blank=True, null=True)
     category = models.CharField(_("select category where food belongs"), max_length=100, blank=False, null=False)
     image = models.ImageField(_("image"), upload_to='image/')
+    type = models.CharField(_("type of meal: food, drink, pasteries"), max_length=256, blank=False, null=False )
 
     def __str__(self):
         return self.name
@@ -30,6 +32,7 @@ class UserOrder(models.Model):
         ordering = ['-updated_at']
 
 class Reservation(models.Model):
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(_('name of the person requesting reservation'), max_length=256, null=False, blank=False)
     count = models.IntegerField(_("number of persons you're setting reservation for"), null=False, blank=False)
     date = models.DateField(_("date in which the reservation is to be set"), null=True, blank=True)

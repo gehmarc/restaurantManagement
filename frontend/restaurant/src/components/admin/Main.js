@@ -11,6 +11,7 @@ import ManageOrder from './Main/ManageOrder';
 import { useState } from 'react';
 import useLocalStorage from '../../UseLocalStorage';
 import Earning from './earning/Earning';
+import ReservationManagement from './Reservation/ReservationManagement';
 
 function Main(){
     const [logoutModal, setLogoutModal] = useState(false)
@@ -35,6 +36,7 @@ function Main(){
                         <Route path = '/foods/manage-food' element={<ManageFood />} />
                         <Route path = '/foods/manage-orders' element={<ManageOrder />} />
                         <Route path = '/foods/create-food' element={<CreatFood />} />
+                        <Route path = '/foods/reservations' element={<ReservationManagement />} />
                         <Route path = '/blackrose/earnings' element={<Earning />} />
                         <Route path = '/' element={<Dashboard />} />
                         

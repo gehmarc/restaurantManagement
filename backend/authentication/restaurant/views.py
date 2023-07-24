@@ -97,3 +97,11 @@ class ReservationControlAPIView(APIView):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
+
+
+class UserReservation(APIView):
+    def get(self, request, id):
+        user_reservations = Reservation.objects.filter(created_by=id).all()
+        serializer = ReservationSerializer(user_reservations, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+

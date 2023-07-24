@@ -86,13 +86,31 @@ const YesterDay = () => {
     return (
         <div className='earning_sale'>
             <div onClick={() => setShowContent(!showContent)} className='earning_timeline'>
-                <div>yersterdays's Sales</div>
+                <div>YesterDay's Sales</div>
                 <div><BsChevronDown /></div>
             </div>
             <div className={`earning_stats ${showContent ? 'display_earning_DropDown': ''}`}>
-                Today you sold for 750,000
+                <div className='earning_stat_content'>
+                    <div className='figures'>
+                        <h3>Total Sales: <span>500</span></h3>
+                        <div><span>Orders: </span><span>58</span></div>
+                        <div><span>Reservations: </span><span>29</span></div>
+                        <div><span>online users: </span><span>90</span></div>
+                    </div>
+                    <div className='chart'>
+                        <PieChart
+                            data={[
+                                { title: 'orders', value: 58, color: '#E38627' },
+                                { title: 'reservation', value: 29, color: '#C13C37' },
+                                { title: 'others', value: 20, color: '#6A2135' },
+                            ]}
+                        />
+                    </div>
+                </div>
+                <div className='earning_total_amount'>Total: 780.000</div>
             </div>
         </div>
+        
     )
 }
 const PastWeek = () => {

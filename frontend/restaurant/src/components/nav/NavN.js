@@ -1,10 +1,17 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './Nav.css'
+import useLocalStorage from '../../UseLocalStorage'
 
 const NavN = () => {
   const navigate = useNavigate()
+  const [user, setUser] = useLocalStorage('user')
   
+  const logout = () => {
+    setUser('')
+    navigate('/')
+    window.location.reload()
+  }
   return (
     <div>
         <header className="header" data-header>
@@ -27,10 +34,20 @@ const NavN = () => {
               <li className="nav-item">
                 <Link to="/contact-us" className="navbar-link" data-nav-link>Contact Us</Link>
               </li>
-
+              <li className="nav-item">
+                <Link to="/about" className="navbar-link" data-nav-link>About Us</Link>
+              </li>
+              {
+                user?.user ?
+              <li onClick={logout} className="nav-item">
+                <Link to="#" className="navbar-link" data-nav-link>Logout</Link>
+              </li>
+              :
               <li className="nav-item">
                 <Link to="/register" className="navbar-link" data-nav-link>Signup / Login</Link>
               </li>
+
+              }
             </ul>
           </nav>
 
