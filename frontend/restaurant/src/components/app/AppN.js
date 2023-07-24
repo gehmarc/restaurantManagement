@@ -10,6 +10,7 @@ import MainMenu from '../main/menu/MainMenu'
 import Reservation from '../main/reservation/Reservation'
 import About from '../main/about/About'
 import Order from '../main/order/Order'
+import Contact from '../main/Contact/Contact'
 
 const AppN = () => {
   return (
@@ -23,6 +24,7 @@ const AppN = () => {
             <Route path='/order' element={<Order />}></Route>
             <Route path='/login' element={<Login />}></Route>
             <Route path='/register' element={<Register />}></Route>
+            <Route path='/contact-us' element={<Contact />}></Route>
             <Route path='/' element={<HomePage />}></Route>
         </Routes>
         <Footer />

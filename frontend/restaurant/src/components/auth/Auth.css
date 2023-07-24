@@ -45,6 +45,7 @@
     margin-bottom: 1rem;
     border-radius: 4px;
     padding: 1rem;
+    outline: none;
 }
 .auth_form_submit {
     color: #F58C2D;

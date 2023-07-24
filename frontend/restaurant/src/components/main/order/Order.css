@@ -118,3 +118,26 @@
     font-family: var(--ff-rubik);   
     font-size: 0.9em;
 }
+.order_courses_image.drink_grid, 
+.order_courses_image.pasteries_grid {
+    display: flex;
+    max-height: 30rem;
+    overflow: hidden;
+    position: relative;
+}
+.drink_grid .order_courseImage_grid{
+    display: block;
+    width: 40%;
+}
+.pasteries_grid .order_courseImage_grid:nth-child(1){
+    filter: blur(5px);
+}
+.pasteries_grid .order_courseImage_grid:nth-child(2){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+    border: 4px solid #fff;
+}

@@ -1,5 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import BlogOne from '../../../staticImage/images/blog-1.jpg'
+import BlogTwo from '../../../staticImage/images/blog-2.jpg'
+import BlogThree from '../../../staticImage/images/blog-3.jpg'
 
 const Blog = () => {
   return (
@@ -22,7 +25,7 @@ const Blog = () => {
               <div className="blog-card">
 
                 <div className="card-banner">
-                  <img src="../../../staticImage/images/blog-1.jpg" 
+                  <img src={ BlogOne }
                     alt="What Do You Think About Cheese Pizza Recipes?" className="w-100" />
 
                   <div className="badge">Pizza</div>
@@ -35,7 +38,7 @@ const Blog = () => {
                     <Link to="#" className="card-meta-link">
                       <ion-icon name="calendar-outline"></ion-icon>
 
-                      <time className="meta-info" datetime="2022-01-01">Jan 01 2022</time>
+                      <time className="meta-info" dateTime="2022-01-01">Jan 01 2022</time>
                     </Link>
 
                     <Link to="#" className="card-meta-link">
@@ -69,7 +72,7 @@ const Blog = () => {
               <div className="blog-card">
 
                 <div className="card-banner">
-                  <img src="./assets/images/blog-2.jpg" width="600" height="390" loading="lazy"
+                  <img src={ BlogTwo } width="600" height="390" loading="lazy"
                     alt="Making Chicken Strips With New Delicious Ingridents." className="w-100" />
 
                   <div className="badge">Burger</div>
@@ -82,7 +85,7 @@ const Blog = () => {
                     <Link to="#" className="card-meta-link">
                       <ion-icon name="calendar-outline"></ion-icon>
 
-                      <time className="meta-info" datetime="2022-01-01">Jan 01 2022</time>
+                      <time className="meta-info" dateTime="2022-01-01">Jan 01 2022</time>
                     </Link>
 
                     <Link to="#" className="card-meta-link">
@@ -116,7 +119,7 @@ const Blog = () => {
               <div className="blog-card">
 
                 <div className="card-banner">
-                  <img src="./assets/images/blog-3.jpg" width="600" height="390" loading="lazy"
+                  <img src={ BlogThree } width="600" height="390" loading="lazy"
                     alt="Innovative Hot Chessyraw Pasta Make Creator Fact." className="w-100" />
 
                   <div className="badge">Chicken</div>
@@ -129,7 +132,7 @@ const Blog = () => {
                     <Link to="#" className="card-meta-link">
                       <ion-icon name="calendar-outline"></ion-icon>
 
-                      <time className="meta-info" datetime="2022-01-01">Jan 01 2022</time>
+                      <time className="meta-info" dateTime="2022-01-01">Jan 01 2022</time>
                     </Link>
 
                     <Link to="#" className="card-meta-link">

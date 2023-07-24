@@ -1,4 +1,11 @@
 import React from 'react'
+// import Img from './assets/images/fried chicken.png'
+import ChickenImage from '../../../staticImage/images/chicken1.png'
+import BurgerImage from '../../../staticImage/images/burgeregg.png'
+import FufuImage from '../../../staticImage/images/fufu.jpg'
+import AchuImage from '../../../staticImage/images/IMG-20230724-WA0022.jpg'
+import Ndole from '../../../staticImage/images/images/ndole.jpg'
+import Salad from '../../../staticImage/images/images/salad.jpg'
 
 const TopMenu = () => {
   return (
@@ -46,7 +53,7 @@ const TopMenu = () => {
               <div className="food-menu-card">
 
                 <div className="card-banner">
-                  <img src="./assets/images/fried chicken.png" width="300" height="300" loading="lazy"
+                  <img src={ChickenImage} width="300" height="300" loading="lazy"
                     alt="Fried chicken" className="w-100" />
 
                   <button className="btn food-menu-btn">Order Now</button>
@@ -81,7 +88,7 @@ const TopMenu = () => {
               <div className="food-menu-card">
 
                 <div className="card-banner">
-                  <img src="./assets/images/burgeregg.png" width="300" height="300" loading="lazy"
+                  <img src={BurgerImage} width="300" height="300" loading="lazy"
                     alt="Burger King Whopper" className="w-100" />
 
                   <button className="btn food-menu-btn">Order Now</button>
@@ -116,14 +123,14 @@ const TopMenu = () => {
               <div className="food-menu-card">
 
                 <div className="card-banner">
-                  <img src="./assets/images/pizegg.png" width="300" height="300" loading="lazy"
+                  <img src={ AchuImage } width="300" height="300" loading="lazy"
                     alt="White Castle Pizzas" className="w-100" />
 
                   <button className="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div className="wrapper">
-                  <p className="category">Pizzas</p>
+                  <p className="category">Achu</p>
 
                   <div className="rating-wrapper">
                     <ion-icon name="star"></ion-icon>
@@ -134,7 +141,7 @@ const TopMenu = () => {
                   </div>
                 </div>
 
-                <h3 className="h3 card-title">White Castle Pizzas</h3>
+                <h3 className="h3 card-title">WAchu and Yellow Soup</h3>
 
                 <div className="price-wrapper">
 
@@ -151,7 +158,7 @@ const TopMenu = () => {
               <div className="food-menu-card">
 
                 <div className="card-banner">
-                  <img src="./assets/images/fufu.jpg" width="300" height="300" loading="lazy"
+                  <img src={ FufuImage } width="300" height="300" loading="lazy"
                     alt="Fufu corn and njama njama" className="w-100" />
 
                   <button className="btn food-menu-btn">Order Now</button>
@@ -187,16 +194,14 @@ const TopMenu = () => {
               <div className="food-menu-card">
 
                 <div className="card-banner">
-                  <img src="./assets/images/food-menu-5.png" width="300" height="300" loading="lazy"
+                  <img src={ Ndole } width="300" height="300" loading="lazy"
                     alt="Kung Pao Chicken BBQ" className="w-100" />
-
-                  <div className="badge">-5%</div>
 
                   <button className="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div className="wrapper">
-                  <p className="category">Nuggets</p>
+                  <p className="category">Ndole</p>
 
                   <div className="rating-wrapper">
                     <ion-icon name="star"></ion-icon>
@@ -207,15 +212,13 @@ const TopMenu = () => {
                   </div>
                 </div>
 
-                <h3 className="h3 card-title">Kung Pao Chicken BBQ</h3>
+                <h3 className="h3 card-title">Ndole and Plantain</h3>
 
                 <div className="price-wrapper">
 
                   <p className="price-text">Price:</p>
 
-                  <data className="price" value="49.00">$49.00</data>
-
-                  <del className="del">$69.00</del>
+                  <data className="price" value="49.00">2500 CFA</data>
 
                 </div>
 
@@ -226,16 +229,14 @@ const TopMenu = () => {
               <div className="food-menu-card">
 
                 <div className="card-banner">
-                  <img src="./assets/images/food-menu-6.png" width="300" height="300" loading="lazy"
+                  <img src={ Salad } width="300" height="300" loading="lazy"
                     alt="Wendy's Chicken" className="w-100" />
-
-                  <div className="badge">-15%</div>
 
                   <button className="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div className="wrapper">
-                  <p className="category">Chicken</p>
+                  <p className="category">Salad</p>
 
                   <div className="rating-wrapper">
                     <ion-icon name="star"></ion-icon>
@@ -246,15 +247,13 @@ const TopMenu = () => {
                   </div>
                 </div>
 
-                <h3 className="h3 card-title">Wendy's Chicken</h3>
+                <h3 className="h3 card-title">Salad</h3>
 
                 <div className="price-wrapper">
 
                   <p className="price-text">Price:</p>
 
-                  <data className="price" value="49.00">$49.00</data>
-
-                  <del className="del">$69.00</del>
+                  <data className="price" value="49.00">1000 CFA</data>
 
                 </div>
 

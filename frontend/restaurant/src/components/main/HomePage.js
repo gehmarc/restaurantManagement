@@ -20,7 +20,7 @@ const HomePage = () => {
           <CTA />
           <Delivery />
           {/* <Testimonials /> */}
-          <Banner />
+          {/* <Banner /> */}
           <Blog />
 
         </main>

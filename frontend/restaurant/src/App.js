@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import useLocalStorage from './UseLocalStorage';
 import AppUser from './components/app/AppUser';
 import AppN from './components/app/AppN';
+import AppNormalUser from './components/app/AppNormalUser';
 
 function App() {
   const [user, setUser] = useLocalStorage('user')
@@ -15,7 +16,11 @@ function App() {
       {
         user?.user 
         ? (
+          user?.user?.is_staff
+          ?
           <AppUser user={user} />
+          :
+          <AppN />
         ) : (
           
           <AppN />

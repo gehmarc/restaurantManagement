@@ -1,4 +1,12 @@
 import React from 'react'
+// import { ReactComponent as FoodOne } from './svg/FoodOne.svg'
+import BurgerCafe from '../../../staticImage/images/burger,cafe.png'
+import Burger from '../../../staticImage/images/burgeregg.png'
+import Chicken from '../../../staticImage/images/chicken1.png'
+import HeroBanner from '../../../staticImage/images/hero-banner-bg.png'
+import Fries from '../../../staticImage/images/images/french fryegg.png'
+import SoftDrink from '../../../staticImage/images/softegg.png'
+import Pizza from '../../../staticImage/images/images/pizegg.png'
 
 const MiddleSection = () => {
   return (
@@ -12,18 +20,7 @@ const MiddleSection = () => {
               <div className="promo-card">
 
                 <div className="card-icon">
-                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none"
-                    xmlns:v="https://vecta.io/nano">
-                    <g clip-path="url(#A)" fill="#ff9d2d">
-                      <path
-                        d="M43.033.002L42.563 0c-7.896 0-15.555 1.546-22.767 4.597-6.965 2.946-13.22 7.163-18.592 12.535l-.043.044c-1.548 1.551-1.546 4.075.004 5.625l2.256 2.257c.754.754 1.76 1.17 2.832 1.17h.001a3.98 3.98 0 0 0 2.834-1.171l.04-.04a1.7 1.7 0 0 1 1.21-.499h.021a1.73 1.73 0 0 1 1.238.537l4.596 4.807c.466.488 1.095.761 1.768.768h.028c.663 0 1.285-.258 1.756-.729.975-.975.993-2.58.04-3.577l-3.308-3.46c-.295-.309-.311-.797-.035-1.087a.76.76 0 0 1 .554-.239h.001a.76.76 0 0 1 .553.236l1.041 1.09c.95.994 2.49 1.079 3.507.195a2.5 2.5 0 0 0 .865-1.787 2.53 2.53 0 0 0-.696-1.858l-.755-.79a1.72 1.72 0 0 1-.454-1.511c.099-.549.444-1.003.944-1.245a46.86 46.86 0 0 1 20.561-4.69l.419.002c1.07.011 2.07-.399 2.827-1.149a3.96 3.96 0 0 0 1.179-2.828V3.984A4 4 0 0 0 43.033.002h0zm2.2 7.199a2.21 2.21 0 0 1-.659 1.581 2.18 2.18 0 0 1-1.575.641l-.435-.002a48.6 48.6 0 0 0-21.325 4.865A3.44 3.44 0 0 0 19.33 16.8a3.46 3.46 0 0 0 .912 3.037l.756.79a.76.76 0 0 1-.052 1.106c-.303.263-.789.226-1.085-.083l-1.041-1.089a2.53 2.53 0 0 0-1.822-.779 2.5 2.5 0 0 0-1.827.784c-.929.976-.912 2.518.037 3.512l3.308 3.46a.82.82 0 0 1-.012 1.121.74.74 0 0 1-.523.215c-.197-.002-.381-.083-.519-.226l-4.596-4.808a3.47 3.47 0 0 0-2.487-1.08h-.042a3.44 3.44 0 0 0-2.449 1.011l-.014.014-.009.009-.022.022c-.423.423-.988.656-1.591.656s-1.168-.232-1.591-.655L2.404 21.56a2.23 2.23 0 0 1 0-3.145l.042-.042A56.54 56.54 0 0 1 20.48 6.214c6.994-2.958 14.423-4.458 22.083-4.458l.454.002h0a2.24 2.24 0 0 1 2.215 2.226v3.218zm-.908 6.202a.88.88 0 0 0-.878.878v43.292c0 .412-.314.574-.411.614s-.433.147-.724-.144L11.436 27.166a.88.88 0 0 0-1.242 0 .88.88 0 0 0 0 1.242l30.877 30.877c.469.469 1.073.715 1.696.715.314 0 .633-.063.942-.19a2.38 2.38 0 0 0 1.494-2.237V14.281a.88.88 0 0 0-.878-.878h0zm-6.657-1.125c-2.112 0-3.83 1.718-3.83 3.83s1.718 3.83 3.83 3.83 3.83-1.718 3.83-3.83-1.718-3.83-3.83-3.83zm0 5.903c-1.143 0-2.074-.93-2.074-2.074s.93-2.073 2.074-2.073 2.073.93 2.073 2.073-.93 2.074-2.073 2.074zM22.575 34.938a3.55 3.55 0 0 0 3.547 3.547 3.55 3.55 0 0 0 3.547-3.547 3.55 3.55 0 0 0-3.547-3.547 3.55 3.55 0 0 0-3.547 3.547h0zm3.547-1.791c.987 0 1.791.803 1.791 1.791s-.803 1.791-1.791 1.791-1.791-.803-1.791-1.791.804-1.791 1.791-1.791zm12.81-2.283a3.68 3.68 0 0 0-3.672 3.672 3.68 3.68 0 0 0 3.672 3.672 3.68 3.68 0 0 0 3.672-3.672 3.68 3.68 0 0 0-3.672-3.672zm0 5.588a1.92 1.92 0 0 1-1.916-1.915 1.92 1.92 0 0 1 1.916-1.916 1.92 1.92 0 0 1 1.915 1.916 1.92 1.92 0 0 1-1.915 1.915zm2.97 8.702a3.92 3.92 0 0 0-3.913-3.912h-.645a3.92 3.92 0 0 0-3.913 3.912 1.7 1.7 0 0 0 1.697 1.697h.23l-.037.687a1.57 1.57 0 0 0 .427 1.16c.294.31.709.488 1.136.488h1.562a1.57 1.57 0 0 0 1.136-.488c.294-.31.45-.733.428-1.16l-.037-.687h.23a1.7 1.7 0 0 0 1.697-1.697h0zm-2.515-.059a1.2 1.2 0 0 0-.87.374c-.225.238-.345.562-.327.889l.057 1.073h-1.16l.057-1.073a1.2 1.2 0 0 0-1.198-1.263h-.758a2.16 2.16 0 0 1 2.156-2.097h.645a2.16 2.16 0 0 1 2.155 2.097h-.758zm-9.689-26.32a4.46 4.46 0 0 0-4.454 4.455v.76a4.46 4.46 0 0 0 4.454 4.455c1.017 0 1.844-.827 1.844-1.843v-.437l.975.052a1.69 1.69 0 0 0 1.251-.46c.335-.318.526-.764.526-1.225v-1.841c0-.461-.192-.908-.526-1.225s-.792-.485-1.251-.46l-.975.052v-.437c0-1.017-.827-1.844-1.844-1.844zm2.84 3.986v1.697l-1.43-.076c-.344-.017-.682.107-.931.343s-.392.569-.392.912v.963c0 .049-.039.087-.087.087A2.7 2.7 0 0 1 27 23.99v-.761a2.7 2.7 0 0 1 2.698-2.698c.048 0 .087.039.087.087v.964c0 .343.143.676.392.912a1.26 1.26 0 0 0 .931.343l1.43-.076z" />
-                    </g>
-                    <defs>
-                      <clipPath id="A">
-                        <path fill="#fff" d="M0 0h60v60H0z" />
-                      </clipPath>
-                    </defs>
-                  </svg> */}
+                  {/* <FoodOne /> */}
                 </div>
 
                 <h3 className="h3 card-title">Pizza</h3>
@@ -32,7 +29,7 @@ const MiddleSection = () => {
                   Food is any substance consumed to provide nutritional support for an organism.
                 </p>
 
-                <img src="./assets/images/pizegg.png" width="300" height="300" loading="lazy" alt="Maxican Pizza"
+                <img src={ Pizza } width="300" height="300" loading="lazy" alt="Maxican Pizza"
                   className="w-100 card-banner" />
 
               </div>
@@ -62,7 +59,7 @@ const MiddleSection = () => {
                   Soft drink is any water-based flavored drink, usually but not necessarily carbonated, and typically including added sweetener.
                 </p>
 
-                <img src="./assets/images/softegg.png" width="300" height="300" loading="lazy" alt="Soft Drinks"
+                <img src={ SoftDrink } width="300" height="300" loading="lazy" alt="Soft Drinks"
                   className="w-100 card-banner" />
 
               </div>
@@ -92,7 +89,7 @@ const MiddleSection = () => {
                   French fries, chips, finger chips, french-fried potatoes, or simply fries, are batonnet or allumette-cut deep-fried potatoes
                 </p>
 
-                <img src="./assets/images/french fryegg.png" width="300" height="300" loading="lazy" alt="French Fry"
+                <img src={ Fries } width="300" height="300" loading="lazy" alt="French Fry"
                   className="w-100 card-banner" />
 
               </div>
@@ -123,7 +120,7 @@ const MiddleSection = () => {
                   Is a dish consisting of a flat round cake of minced beef, or sometimes another savoury ingredient, that is fried or grilled and served in a split bun or roll with various condiments and toppings
                 </p>
 
-                <img src="./assets/images/hero-banner.png" width="300" height="300" loading="lazy" alt="Burger Kingo"
+                <img src={ Burger } width="300" height="300" loading="lazy" alt="Burger Kingo"
                   className="w-100 card-banner" />
 
               </div>
@@ -132,29 +129,13 @@ const MiddleSection = () => {
             <li className="promo-item">
               <div className="promo-card">
 
-                <div className="card-icon">
-                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none"
-                    xmlns:v="https://vecta.io/nano">
-                    <g clip-path="url(#A)">
-                      <path
-                        d="M57.492 40.5h-9.248l1.652-.602c3.539-1.415 5.333-3.077 5.333-4.942 0-2.867-2.322-3.83-4.371-4.679-.878-.364-1.785-.741-2.529-1.252a.88.88 0 0 0-1.222.226.88.88 0 0 0 .226 1.222c.895.616 1.89 1.029 2.851 1.427 2.099.87 3.287 1.441 3.287 3.055 0 1.029-1.541 2.236-4.228 3.31-3.219 1.287-6.956 1.984-8.485 2.234H37.88c1.972-1.538 3.369-3.644 4.263-6.432 1.088-3.393 2.64-5.885 5.033-8.08.664-.609.959-1.469.856-2.286l5.013-3.729c.136-.101.324-.105.467-.009 1.086.729 2.203.929 3.23.577.81-.277 1.444-.858 1.787-1.635.356-.807.352-1.749-.011-2.585-.476-1.096-1.488-1.842-2.643-1.976.218-1.142-.191-2.332-1.094-3.114-.689-.597-1.587-.883-2.463-.785a2.99 2.99 0 0 0-2.095 1.216c-.643.874-.787 1.999-.417 3.254.049.165-.011.343-.147.442l-5.06 3.667c-.748-.343-1.657-.319-2.437.132-2.811 1.625-5.653 2.359-9.216 2.382-3.06.019-5.576.783-7.691 2.337-2.361 1.733-3.944 4.235-4.456 7.043-.516 2.828.112 5.627 1.767 7.882.462.629.995 1.197 1.585 1.698H13.017C6.254 39.138 2.966 35.766 2.966 30.192c0-4.24 1.895-8.611 5.199-11.992 3.571-3.654 8.341-5.667 13.43-5.667 5.83 0 11.891 2.127 16.629 5.835a.88.88 0 0 0 1.234-.151.88.88 0 0 0-.15-1.234c-5.041-3.945-11.497-6.209-17.712-6.209-5.566 0-10.782 2.201-14.687 6.196-3.622 3.706-5.7 8.525-5.7 13.22 0 4.76 2.103 8.21 6.259 10.308H2.509A2.51 2.51 0 0 0 0 43.009c0 1.383 1.125 2.509 2.509 2.509h3.187a.12.12 0 0 1 .112.075l.558 1.366a4.26 4.26 0 0 0 3.957 2.658h39.354a4.26 4.26 0 0 0 3.957-2.658l.558-1.365c.019-.046.063-.076.112-.076h3.187c1.383 0 2.508-1.126 2.508-2.509a2.51 2.51 0 0 0-2.508-2.509h0zm-6.801-23.718a2.17 2.17 0 0 0 .799-2.363c-.146-.493-.239-1.19.147-1.714a1.23 1.23 0 0 1 .874-.51c.391-.043.798.09 1.117.367a1.52 1.52 0 0 1 .475 1.623c-.138.44-.056.925.221 1.299s.711.598 1.172.598h0a1.52 1.52 0 0 1 1.407.94c.168.387.174.816.015 1.176-.101.228-.313.531-.749.681-.615.211-1.253-.087-1.68-.373a2.17 2.17 0 0 0-2.495.056l-4.752 3.535-1.35-1.839 4.798-3.476zm-26.71 20.98c-1.367-1.862-1.884-4.179-1.455-6.526.432-2.365 1.77-4.476 3.767-5.942 1.806-1.327 3.986-1.979 6.662-1.996 3.886-.025 6.996-.832 10.085-2.618.34-.196.742-.167.998.054a.73.73 0 0 1 .108.116l2.01 2.738c.028.038.053.08.074.127.141.316.048.712-.243.979-2.629 2.412-4.331 5.138-5.517 8.838-.818 2.549-2.093 4.433-3.9 5.759-.674.495-1.408.902-2.184 1.21H27.48c-1.403-.583-2.61-1.527-3.499-2.738h0zm33.511 5.998H18.744a.88.88 0 0 0-.879.879.88.88 0 0 0 .879.879h33.581l-.317.776a2.51 2.51 0 0 1-2.33 1.565H10.323a2.51 2.51 0 0 1-2.33-1.565l-.317-.776h6.979a.88.88 0 0 0 .879-.879.88.88 0 0 0-.879-.879H2.509a.75.75 0 1 1 0-1.502h54.983a.75.75 0 1 1 0 1.502h0z"
-                        fill="#ff9d2d" />
-                    </g>
-                    <defs>
-                      <clipPath id="A">
-                        <path fill="#fff" d="M0 0h60v60H0z" />
-                      </clipPath>
-                    </defs>
-                  </svg> */}
-                </div>
-
                 <h3 className="h3 card-title">Chicken</h3>
 
                 <p className="card-text">
                   Is a dish consisting of chicken pieces that have been coated with seasoned flour or batter and pan-fried, deep fried, pressure fried, or air fried.
                 </p>
 
-                <img src="./assets/images/chicken1.png" width="300" height="300" loading="lazy" alt="Chicken Masala"
+                <img src={Chicken} width="300" height="300" loading="lazy" alt="Chicken Masala"
                   className="w-100 card-banner" />
 
               </div>
@@ -170,7 +151,7 @@ const MiddleSection = () => {
         <div className="container">
 
           <div className="about-banner">
-            <img src="./assets/images/burger,cafe.png" width="600" height="700" loading="lazy" alt="Burger with Drinks"
+            <img src={ BurgerCafe } width="600" height="700" loading="lazy" alt="Burger with Drinks"
               className="w-100 about-img" />
           </div>
 

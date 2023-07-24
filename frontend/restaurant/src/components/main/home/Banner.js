@@ -2,76 +2,76 @@ import React from 'react'
 
 const Banner = () => {
   return (
-    <section class="section section-divider gray banner">
-        <div class="container">
+    <section className="section section-divider gray banner">
+        <div className="container">
 
-          <ul class="banner-list">
+          <ul className="banner-list">
 
-            <li class="banner-item banner-lg">
-              <div class="banner-card">
+            <li className="banner-item banner-lg">
+              <div className="banner-card">
 
                 <img src="./assets/images/banner-1.jpg" width="550" height="450" loading="lazy"
-                  alt="Discount For Delicious Tasty Burgers!" class="banner-img" />
+                  alt="Discount For Delicious Tasty Burgers!" className="banner-img" />
 
-                <div class="banner-item-content">
-                  <p class="banner-subtitle">50% Off Now!</p>
+                <div className="banner-item-content">
+                  <p className="banner-subtitle">50% Off Now!</p>
 
-                  <h3 class="banner-title">Discount For Delicious Tasty Burgers!</h3>
+                  <h3 className="banner-title">Discount For Delicious Tasty Burgers!</h3>
 
-                  <p class="banner-text">Sale off 50% only this week</p>
+                  <p className="banner-text">Sale off 50% only this week</p>
 
-                  <button class="btn">Order Now</button>
+                  <button className="btn">Order Now</button>
                 </div>
 
               </div>
             </li>
 
-            <li class="banner-item banner-sm">
-              <div class="banner-card">
+            <li className="banner-item banner-sm">
+              <div className="banner-card">
 
                 <img src="./assets/images/banner-2.jpg" width="550" height="465" loading="lazy" alt="Delicious Pizza"
-                  class="banner-img" />
+                  className="banner-img" />
 
-                <div class="banner-item-content">
-                  <h3 class="banner-title">Delicious Pizza</h3>
+                <div className="banner-item-content">
+                  <h3 className="banner-title">Delicious Pizza</h3>
 
-                  <p class="banner-text">50% off Now</p>
+                  <p className="banner-text">50% off Now</p>
 
-                  <button class="btn">Order Now</button>
+                  <button className="btn">Order Now</button>
                 </div>
 
               </div>
             </li>
 
-            <li class="banner-item banner-sm">
-              <div class="banner-card">
+            <li className="banner-item banner-sm">
+              <div className="banner-card">
 
                 <img src="./assets/images/banner-3.jpg" width="550" height="465" loading="lazy" alt="American Burgers"
-                  class="banner-img" />
+                  className="banner-img" />
 
-                <div class="banner-item-content">
-                  <h3 class="banner-title">American Burgers</h3>
+                <div className="banner-item-content">
+                  <h3 className="banner-title">American Burgers</h3>
 
-                  <p class="banner-text">50% off Now</p>
+                  <p className="banner-text">50% off Now</p>
 
-                  <button class="btn">Order Now</button>
+                  <button className="btn">Order Now</button>
                 </div>
 
               </div>
             </li>
 
-            <li class="banner-item banner-md">
-              <div class="banner-card">
+            <li className="banner-item banner-md">
+              <div className="banner-card">
 
                 <img src="./assets/images/banner-4.jpg" width="550" height="220" loading="lazy" alt="Tasty Buzzed Pizza"
-                  class="banner-img" />
+                  className="banner-img" />
 
-                <div class="banner-item-content">
-                  <h3 class="banner-title">Tasty Buzzed Pizza</h3>
+                <div className="banner-item-content">
+                  <h3 className="banner-title">Tasty Buzzed Pizza</h3>
 
-                  <p class="banner-text">Sale off 50% only this week</p>
+                  <p className="banner-text">Sale off 50% only this week</p>
 
-                  <button class="btn">Order Now</button>
+                  <button className="btn">Order Now</button>
                 </div>
 
               </div>

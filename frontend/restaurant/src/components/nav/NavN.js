@@ -25,7 +25,7 @@ const NavN = () => {
               </li>
 
               <li className="nav-item">
-                <Link to="#" className="navbar-link" data-nav-link>Contact Us</Link>
+                <Link to="/contact-us" className="navbar-link" data-nav-link>Contact Us</Link>
               </li>
 
               <li className="nav-item">

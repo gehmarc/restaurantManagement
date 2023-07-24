@@ -1,4 +1,5 @@
 import React from 'react'
+import Banner from '../../../staticImage/images/images/cta-banner.png'
 
 const CTA = () => {
   return (
@@ -21,7 +22,7 @@ const CTA = () => {
           </div>
 
           <figure className="cta-banner">
-            <img src="./assets/images/cta-banner.png" width="700" height="637" loading="lazy" alt="Burger"
+            <img src={Banner} width="700" height="637" loading="lazy" alt="Burger"
               className="w-100 cta-img" />
           </figure>
 

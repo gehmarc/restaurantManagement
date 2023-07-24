@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { ReactComponent as DeliveryBoy } from "../../../staticImage/images/delivery-boy.svg";
+import BannerBG from '../../../staticImage/images/delivery-banner-bg.png'
 const Delivery = () => {
   return (
     <section className="section section-divider gray delivery">
@@ -19,11 +20,11 @@ const Delivery = () => {
           </div>
 
           <figure className="delivery-banner">
-            <img src="./assets/images/delivery-banner-bg.png" width="700" height="602" loading="lazy" alt="clouds"
+            <img src={BannerBG} width="700" height="602" loading="lazy" alt="clouds"
               className="w-100" />
-
-            <img src="./assets/images/delivery-boy.svg" width="1000" height="880" loading="lazy" alt="delivery boy"
-              className="w-100 delivery-img" data-delivery-boy />
+            <DeliveryBoy className="w-100 delivery-img" data-delivery-boy />
+            {/* <img src={DeliveryBoy} width="1000" height="880" loading="lazy" alt="delivery boy" */}
+              {/* className="w-100 delivery-img" data-delivery-boy /> */}
           </figure>
 
         </div>

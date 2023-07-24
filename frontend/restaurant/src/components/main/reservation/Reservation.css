@@ -1,18 +1,23 @@
 .book_reservation {
     min-height: 100vh;
-    background: #b9b9c0;
+    background-image:
+            linear-gradient(45deg,rgba(9, 126, 235, 0.205),rgba(8, 82, 156, 0.205)), url('../../../static/img/Peppered-Snail-Recipe-google-2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background: #b9b9c0; */
 }
 .book_reservation .container {
     width: 100%;
     max-width: 80rem;
-    margin: auto;
-    padding: 0;
+    margin: 6rem auto;
+    padding: 10em 0rem;
 }
 .book_reservation .section-divider .container {
     max-width: 150rem;
 }
 .reservation_header {
-    height: 100vh;
+    min-height: 90vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -23,9 +28,9 @@
 
 .book_reservation .title_reservation {
     font-weight: 700;
-    /* font-family: 'Times New Roman', Times, serif; */
-    font-family: 'August';
-    font-size: 3rem;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
 }
 .reservation_form {
     width: 80%;
@@ -64,4 +69,166 @@
 }
 .reservationModal .delete_modal_content{
     max-width: 60rem;
+}
+
+/* ============ DROPDOWN = */
+.dropdownWrapper {
+    position: relative;
+    margin-bottom: 3rem;
+}
+.dropdown-list {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(110%);
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    height: 0px;
+    overflow: hidden;
+} 
+
+.dropdown-subjects {
+    overflow-y: scroll;
+}
+
+.showlevelDropDown {
+    visibility: visible;
+    height: 500%;
+    overflow-y: scroll;
+    opacity: 1;
+}
+.showlevelDropDown::-webkit-scrollbar {
+  display: none;
+}
+.dropdown {
+    background-color: #fff;
+}
+
+.form_input {
+    width: 100%;
+    padding: 0.6rem .9rem;
+    border: 1px solid #d3d3ff;
+    margin-bottom: 1rem;
+    border: 1px solid #d3d3ff;
+    border-radius: 4px;
+    font-size: var(--fs-st);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dropdown_content {
+    padding: 0;
+}
+.dropdown_content ul {
+    width: 100%;
+}
+.dropdown_content li {
+    padding: .8rem 1.4rem;
+    transition: all .5s ease-in-out;
+}
+.dropdown_content li:hover {
+    background-color: #82241a34;
+}
+.dropdown_indicator {
+    float: right;
+}
+
+.time_variance {
+    display: flex;
+    align-items: center;
+    margin-block: 2rem;
+}
+.time_variance_list {
+    display: flex;
+    margin-left: 2rem;
+    flex-wrap: wrap;
+}
+.time_variance_list span {
+    color: #fff;
+    background-color: #82241A;
+    padding: .4rem 1rem;
+    border-radius: 4px;
+    margin-right: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+/* =====================ALL RESERVATIONS ================ */
+.yourReservations {
+    margin-block: 3rem;
+}
+.yourReservations .title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.reservation_list_item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #e7e7e7;
+    margin-bottom: 1.5rem;
+    border-right: 5px solid green;
+}
+.reservation_list_item .reservation_attr {
+    padding: 1.5rem;
+    text-align: center;
+    border-right: 1px solid #e7e7e7;
+    width: 100%;
+}
+.reservation_attr_del {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.reservation_attr_state {
+    font-size: .9em;
+    background-color: green;
+    color: #fff;
+    display: inline;
+    border-radius: 20px;
+    padding: .3rem 1rem;
+}
+.reservation_attr_action {
+    padding: 1rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.reservation_attr_action.action_delete {
+    background-color: rgba(220, 20, 60, 0.253);
+    color: crimson;
+}
+.reservation_attr_action.action_edit {
+    color: var(--tangerine);
+    background-color: rgba(255, 217, 0, 0.26);
+}
+.reservation_attr_action.action_remake {
+    color: green;
+    background-color: rgba(0, 128, 0, 0.253);
+}
+
+@media (min-width: 50rem){
+    .book_reservation .container {
+        padding: 10em 0rem;
+    }
+    .book_reservation .title_reservation {
+        font-weight: 700;
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+}
+@media(max-width: 50rem) {
+    .yourReservations {
+        overflow-x: hidden;
+    }
+    .yourReservations .container {
+        overflow-x: scroll;
+        width: 100%;
+    }
+    .reservation_list {
+        width: 200%;
+    }
 }

@@ -13,6 +13,7 @@ const Login = () => {
     const [password, setPassword] = useState('')
     const [user, setUser] = useLocalStorage('user')
 
+    const navigate = useNavigate()
     const data = {
         "email": email,
         "password": password
@@ -26,7 +27,7 @@ const Login = () => {
         (res.status === 200 && res.data?.user) && setUser(res?.data)
         if(res.status === 200){
             
-            window.location.pathname = ''
+            navigate('/')
             window.location.reload('')
         }
     }
