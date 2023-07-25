@@ -35,16 +35,19 @@ const CreatFood = () => {
     }
 
 	const sendData = async() => {
+		isAvailable === 'false'? setIsAvailable(false): setIsAvailable(true)
 		try{
 			const formData = new FormData()
 			formData.append("name", title)
 			formData.append("price", parseInt(price))
 			formData.append("description", description)
 			formData.append("category", category)
+			formData.append("type", tags[0])
 			formData.append("available", isAvailable)
 			formData.append("image", img)
 			
 			console.log(img);
+
 			const res = await axios.post('http://localhost:8000/api/v1/restaurant/foods/', formData, {
               headers: {
                 'Content-Type': 'multipart/form-data'

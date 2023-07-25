@@ -24,7 +24,7 @@ const ReservationModal = ({ handleCloseModal, reservation }) => {
         try{
             const res = await axios.post('http://127.0.0.1:8000/api/v1/restaurant/reservations/',reservation, config)
             if(res.status === 201){
-                // window.location.reload()
+                window.location.reload()
             }
         }
         catch(err) {

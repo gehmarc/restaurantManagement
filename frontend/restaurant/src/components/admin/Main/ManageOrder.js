@@ -19,7 +19,7 @@ const ManageOrder = () => {
             foodModal && <FoodOrderModal handleRemoveModal = {removeModal} />
         }
         <div className='container'>
-            <div className='dashboard_title'>Manage Available Foods</div>
+            <div className='dashboard_title'>All Available Orders</div>
             <div className='add_food_btn_wrapper'>
                 <div className='add_food_btn' onClick={() =>navigate('/foods/create-order')}>Add Order Directly</div>
             </div>
